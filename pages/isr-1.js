@@ -1,48 +1,40 @@
 import { useEffect } from 'react';
-import Head from 'next/head'
 import Prism from 'prismjs';
-import counter from '../utils/counter';
-import { code, localResults, vercelResults } from '../constants/isr-1';
+import Head from 'next/head'
+import { code } from '../constants/isr-1';
 
-const isr1Counter = counter();
-
-function Isr1({ count }) {
+function Isr1({ num }) {
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
 
   return (
     <div>
+      <Head>
+        <title>ISR Test 1</title>
+      </Head>
       <h1>ISR Test #1</h1>
-      <p>A simple counter based test. Just increments a counter and returns it.</p>
+      <p>Returns a number from getStaticProps, with revalidation every 2 seconds.</p>
       <h2>Count</h2>
-      <p>{count}</p>
+      <p>{num}</p>
       <h2>Code</h2>
       <pre>
         <code className="language-javascript">{code}</code>
       </pre>
-      <h2>Console</h2>
-      <h3>Local production build:</h3>
-      <pre>
-        <code className="language-shell">{localResults}</code>
-      </pre>
-      <h3>Vercel deployments:</h3>
-      <pre>
-        <code className="language-shell">{vercelResults}</code>
-      </pre>
-      <h2>Visual</h2>
-      <h3>Local production build:</h3>
-      <p>No hiccups. User always sees the page and updated count.</p>
-      <h3>Vercel deployments:</h3>
-      <p>Same</p>
+      <h2>Local production build:</h2>
+      <p></p>
+      <h2>Vercel deployments:</h2>
+      <p></p>
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const count = isr1Counter();
-  console.log('isr-1 getStaticProps running, count:', count);
+  console.log('isr-1 getStaticProps running');
 
   return {
     props: {
-      count,
+      num: 2,
     },
     revalidate: 2,
   }

@@ -31,6 +31,11 @@ function MyApp({ Component, pageProps }) {
                   <a>ISR 2</a>
                 </Link>
               </li>
+              <li>
+                <Link href="/isr-3">
+                  <a>ISR 3</a>
+                </Link>
+              </li>
             </ul>
           </nav>
         </header>
