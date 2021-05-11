@@ -1,9 +1,6 @@
 export const code = `export async function getStaticProps() {
-  const count = counter();
-
-  console.log('getStaticProps running', count);
-
-  if (count === 5) throw new Error('Failed to get static props');
+  const count = isr1Counter();
+  console.log('isr-1 getStaticProps running, count:', count);
 
   return {
     props: {
@@ -13,14 +10,15 @@ export const code = `export async function getStaticProps() {
   }
 }`;
 
-export const results = `getStaticProps running 1
-getStaticProps running 2
-getStaticProps running 3
-getStaticProps running 4
-getStaticProps running 5
-Error: Failed to get static props
-getStaticProps running 6
-getStaticProps running 7
-getStaticProps running 8
-getStaticProps running 9
+export const localResults = `isr-1 getStaticProps running, count: 1
+isr-1 getStaticProps running, count: 2
+isr-1 getStaticProps running, count: 3
+isr-1 getStaticProps running, count: 4
+isr-1 getStaticProps running, count: 5
+isr-1 getStaticProps running, count: 6
+isr-1 getStaticProps running, count: 7
+isr-1 getStaticProps running, count: 8
+isr-1 getStaticProps running, count: 9
 `;
+
+export const vercelResults = ``;
