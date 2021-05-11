@@ -1,10 +1,9 @@
 import { useEffect } from 'react';
 import Head from 'next/head'
 import Prism from 'prismjs';
-import counter from '../utils/counter';
 import { code, localResults, vercelResults } from '../constants/isr-2';
 
-const is2Counter = counter();
+let count = 0;
 
 function Isr2({ count }) {
   useEffect(() => {
@@ -41,7 +40,7 @@ function Isr2({ count }) {
 }
 
 export async function getStaticProps() {
-  const count = is2Counter();
+  count += 1;
   console.log('isr-2 getStaticProps running, count:', count);
   if (count === 5) throw new Error('Failed to get static props');
 
