@@ -14,7 +14,7 @@ function Isr2({ num }) {
         <title>ISR Test 2</title>
       </Head>
       <h1>ISR Test #2</h1>
-      <p>Fetches a random number from an API. If it's {`<`} 5, throws an error. Revalidates every 2 seconds.</p>
+      <p>Fetches a random number from an API. If it's &#60; 5, throws an error. Revalidates every 2 seconds.</p>
       <h2>Num</h2>
       <p>{num}</p>
       <h2>Code</h2>
@@ -36,7 +36,7 @@ export async function getStaticProps() {
 
   console.log('isr-2 getStaticProps running, num:', num);
 
-  if (num < 5) throw new Error('Failed to get static props');
+  if (num < 5) throw new Error('isr-2 Failed to get static props');
 
   return {
     props: {
