@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Head from 'next/head'
 import Prism from 'prismjs';
+import { isBuilding } from '../utils/phase';
 import { code } from '../constants/isr-3';
 
 function Isr3({ num }) {
@@ -33,8 +34,10 @@ export async function getStaticProps() {
     const res = await fetch('https://random-data-api.com/api/number/random_number');
     const data = await res.json();
     const num = data.digit;
+
     console.log('isr-3 getStaticProps running, num:', num);
-    if (num < 5) throw new Error('isr-3 Failed to get static props');
+
+    if (!isBuilding() && num < 5) throw new Error('isr-3 Failed to get static props');
 
     return {
       props: {

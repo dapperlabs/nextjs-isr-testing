@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Head from 'next/head'
 import Prism from 'prismjs';
+import { isBuilding } from '../utils/phase';
 import { code } from '../constants/isr-2';
 
 function Isr2({ num }) {
@@ -36,7 +37,7 @@ export async function getStaticProps() {
 
   console.log('isr-2 getStaticProps running, num:', num);
 
-  if (num < 5) throw new Error('isr-2 Failed to get static props');
+  if (!isBuilding() && num < 5) throw new Error('isr-2 Failed to get static props');
 
   return {
     props: {
