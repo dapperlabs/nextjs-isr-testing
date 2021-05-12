@@ -16,6 +16,7 @@ function Isr2({ num }) {
       </Head>
       <h1>ISR Test #2</h1>
       <p>Fetches a random number from an API. If it's &#60; 5, throws an error. Revalidates every 2 seconds.</p>
+      <p><strong>Note that errors are ignored during build phase.</strong></p>
       <h2>Num</h2>
       <p>{num}</p>
       <h2>Code</h2>

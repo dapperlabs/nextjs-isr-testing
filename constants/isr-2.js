@@ -5,7 +5,7 @@ export const code = `export async function getStaticProps() {
 
   console.log('isr-2 getStaticProps running, num:', num);
 
-  if (num < 5) throw new Error('Failed to get static props');
+  if (!isBuilding() && num < 5) throw new Error('isr-2 Failed to get static props');
 
   return {
     props: {

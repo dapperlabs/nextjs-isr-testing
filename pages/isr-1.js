@@ -22,9 +22,9 @@ function Isr1({ num }) {
         <code className="language-javascript">{code}</code>
       </pre>
       <h2>Local production build:</h2>
-      <p></p>
+      <p>Logs every time getStaticProps runs</p>
       <h2>Vercel deployments:</h2>
-      <p></p>
+      <p>Logs every time getStaticProps runs</p>
     </div>
   );
 }
