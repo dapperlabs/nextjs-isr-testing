@@ -40,6 +40,9 @@ function MyApp({ Component, pageProps }) {
           </nav>
         </header>
         <Component {...pageProps} />
+        <footer>
+          <span>A <a href="https://www.dapperlabs.com/" target="_blank">dapperlabs.com</a> experiment</span>
+        </footer>
       </div>
     </Fragment>
   )

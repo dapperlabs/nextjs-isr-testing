@@ -1,4 +1,4 @@
-# ISR Testing
+# Next.js ISR Testing
 
 Exploration of various ways ISR reacts / responds to errors and different prop returns. See the `pages` directory for the various tests. Each of the tests are prefixed with `isr-`.
 
