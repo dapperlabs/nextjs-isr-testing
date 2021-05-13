@@ -12,7 +12,7 @@ function Isr2({ num }) {
   return (
     <div>
       <Head>
-        <title>ISR Test 2</title>
+        <title>ISR Test #2</title>
       </Head>
       <h1>ISR Test #2</h1>
       <p>Fetches a random number from an API. If it's &#60; 5, throws an error. Revalidates every 2 seconds.</p>

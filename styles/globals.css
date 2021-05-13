@@ -58,6 +58,7 @@ code[class*="language-"] {
 
 .wrapper {
   margin: 0 auto;
+  padding: 0 40px;
   max-width: 720px;
 }
 
@@ -72,6 +73,7 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -82,6 +84,10 @@ nav ul {
 nav li {
   margin: 0;
   padding: 0;
+}
+
+nav a {
+  padding: 8px;
 }
 
 footer {

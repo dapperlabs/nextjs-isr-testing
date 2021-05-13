@@ -12,7 +12,7 @@ function Isr3({ num }) {
   return (
     <div>
       <Head>
-        <title>ISR Test 3</title>
+        <title>ISR Test #3</title>
       </Head>
       <h1>ISR Test #3</h1>
       <p>Fetches a random number from an API. If it's &#60; 5, throws an error. This error gets caught though, and in the catch block, we reurn notFound and also do revalidation. Revalidates every 2 seconds.</p>

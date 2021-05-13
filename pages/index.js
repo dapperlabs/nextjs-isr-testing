@@ -20,6 +20,23 @@ export default function Home() {
       <p>
         <img src="https://vercel.com/_next/image?url=%2Fdocs-proxy%2Fstatic%2Fdocs%2Fisr%2Fregeneration.png&amp;w=1080&amp;q=75" alt="ISR Lifecycle" />
       </p>
+      <p>
+        ISR works in tandem with two static generation features from next.js:
+      </p>
+      <ul>
+        <li>
+          <a href="https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation" target="_blank">
+            <code>getStaticProps</code>
+          </a>
+          – If you export an async function called getStaticProps from a page, Next.js will pre-render this page at build time using the props returned by getStaticProps.
+        </li>
+        <li>
+          <a href="https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation" target="_blank">
+            <code>getStaticPaths</code>
+          </a>
+          – If a page has dynamic routes and uses getStaticProps it needs to define a list of paths that have to be rendered to HTML at build time. If you export an async function called getStaticPaths from a page that uses dynamic routes, Next.js will statically pre-render all the paths specified by getStaticPaths.
+        </li>
+      </ul>
       <h2 id="reference-links">Reference Links</h2>
       <ul>
       <li><a href="https://www.smashingmagazine.com/2021/04/incremental-static-regeneration-nextjs/" target="_blank">A Complete Guide To Incremental Static Regeneration (ISR) With Next.js</a></li>

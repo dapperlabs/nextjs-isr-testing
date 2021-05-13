@@ -11,7 +11,7 @@ function Isr1({ num }) {
   return (
     <div>
       <Head>
-        <title>ISR Test 1</title>
+        <title>ISR Test #1</title>
       </Head>
       <h1>ISR Test #1</h1>
       <p>Returns a number from getStaticProps, with revalidation every 2 seconds.</p>
