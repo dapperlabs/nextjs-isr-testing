@@ -1,5 +1,5 @@
-export async function promise() {
-  return new Promise((resolve) => {
-    setTimeout(resolve, 1000);
+export async function promise(result = 'pass') {
+  return new Promise((resolve, reject) => {
+    setTimeout(result === 'pass' ? resolve : reject, 1000);
   });
 }
