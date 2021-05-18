@@ -45,6 +45,7 @@ export default function Home() {
       <h2 id="extra-notes">Extra Notes</h2>
       <ul>
       <li>Client side transitions do not trigger revalidation</li>
+      <li>However next.js link prefetching does have some impact on ISR. From their docs – Prefetch the page in the background. Defaults to true. Any <Link /> that is in the viewport (initially or through scroll) will be preloaded. Prefetch can be disabled by passing prefetch = false. When prefetch is set to false, prefetching will still occur on hover. Pages using Static Generation will preload JSON files with the data for faster page transitions. Prefetching is only enabled in production.</li>
       <li>Refreshing on any page in the app triggers revalidation if the revalidation time period has passed</li>
       <li>If I am the one that loads the page and triggers the revalidation, the revalidation will happen in the background but I will see data that’s stale by one revalidation period.</li>
       <li>In local dev, <code>getStaticProps</code> runs on every page request. If <code>getStaticProps</code> errors, the next.js error overlay view is shown.</li>
