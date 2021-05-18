@@ -24,6 +24,8 @@ function Isr4ById({ id }) {
 }
 
 export async function getStaticPaths() {
+  console.log('isr-4 getStaticPaths running');
+
   return {
     paths: [
       {
@@ -48,6 +50,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const id = context.params.id;
+
+  console.log('isr-4 getStaticProps running, id:', id);
 
   return {
     props: {

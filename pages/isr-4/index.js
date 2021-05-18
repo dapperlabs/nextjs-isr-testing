@@ -20,7 +20,7 @@ function Isr4() {
         {new Array(8).fill().map((_, index) => {
           const id = index + 1;
           return (
-            <li key={`isr4-link-${id}`}>
+            <li key={`isr-4-link-${id}`}>
               <Link href={`/isr-4/${id}`}>
                 <a>ID #{id}</a>
               </Link>
@@ -33,9 +33,7 @@ function Isr4() {
         <code className="language-javascript">{code}</code>
       </pre>
       <h2>Local production build:</h2>
-      <p>Logs every time getStaticProps runs</p>
       <h2>Vercel deployments:</h2>
-      <p>Logs every time getStaticProps runs</p>
     </div>
   );
 }
